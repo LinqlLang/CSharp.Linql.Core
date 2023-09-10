@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Linql.Core", "Linql.Core\Linql.Core.csproj", "{2B4DCCCF-5F1C-4850-9A8E-02E01C1EB13D}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Linql.Core.Test", "Linql.Core.Test\Linql.Core.Test.csproj", "{5ECA6853-110A-4769-96DF-8A105165FF0A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2B4DCCCF-5F1C-4850-9A8E-02E01C1EB13D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2B4DCCCF-5F1C-4850-9A8E-02E01C1EB13D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2B4DCCCF-5F1C-4850-9A8E-02E01C1EB13D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2B4DCCCF-5F1C-4850-9A8E-02E01C1EB13D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5ECA6853-110A-4769-96DF-8A105165FF0A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5ECA6853-110A-4769-96DF-8A105165FF0A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5ECA6853-110A-4769-96DF-8A105165FF0A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5ECA6853-110A-4769-96DF-8A105165FF0A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6A6165EE-8067-461C-861B-9258AE00E52B}
+	EndGlobalSection
+EndGlobal
