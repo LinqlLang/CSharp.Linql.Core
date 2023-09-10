@@ -9,8 +9,8 @@
     <VersionSuffix>alpha1</VersionSuffix>
     <Authors>Kristopher Sodroski</Authors>
     <Description>Json serializable model for Linql. </Description>
-    <PackageProjectUrl>https://github.com/TheKrisSodroski/Linql</PackageProjectUrl>
-    <RepositoryUrl>https://github.com/TheKrisSodroski/Linql</RepositoryUrl>
+    <PackageProjectUrl>https://github.com/LinqlLang/Linql</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/LinqlLang/CSharp.Linql.Client</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <PackageTags>api;graph;graphql;linql;linq</PackageTags>
     <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
@@ -19,14 +19,6 @@
 
   <ItemGroup>
     <PackageReference Include="System.Text.Json" Version="7.0.*" />
-  </ItemGroup>
-
-
-  <ItemGroup>
-    <None Update="LICENSE.txt">
-      <Pack>True</Pack>
-      <PackagePath>\</PackagePath>
-    </None>
   </ItemGroup>
 
 </Project>
