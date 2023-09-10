@@ -27,6 +27,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Linql.Core.Test.DataModel\Linql.Core.Test.DataModel.csproj" />
     <ProjectReference Include="..\Linql.Core\Linql.Core.csproj" />
   </ItemGroup>
 

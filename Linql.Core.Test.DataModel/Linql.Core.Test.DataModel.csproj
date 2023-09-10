@@ -8,17 +8,12 @@
     <VersionPrefix>1.0.0</VersionPrefix>
     <VersionSuffix>alpha1</VersionSuffix>
     <Authors>Kristopher Sodroski</Authors>
-    <Description>Json serializable model for Linql. </Description>
+    <Description>Test Models used for Linql Core Tests</Description>
     <PackageProjectUrl>https://github.com/LinqlLang/Linql</PackageProjectUrl>
     <RepositoryUrl>https://github.com/LinqlLang/CSharp.Linql.Core</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <PackageTags>api;graph;graphql;linql;linq</PackageTags>
     <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
   </PropertyGroup>
-
-
-  <ItemGroup>
-    <PackageReference Include="System.Text.Json" Version="7.0.*" />
-  </ItemGroup>
 
 </Project>

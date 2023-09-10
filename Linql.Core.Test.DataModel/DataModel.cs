@@ -9,7 +9,7 @@ namespace Linql.Core.Test
 
     public interface IDataModel
     {
-        public bool Boolean { get; set; }
+        bool Boolean { get; set; }
 
     }
 
@@ -87,7 +87,7 @@ namespace Linql.Core.Test
     {
         public int? Integer { get; set; }
 
-        public string? String { get; set; }
+        public string String { get; set; }
 
         public decimal? Decimal { get; set; }
 
@@ -99,12 +99,12 @@ namespace Linql.Core.Test
 
         public Guid? Guid { get; set; }
 
-        public List<int>? ListInteger { get; set; }
+        public List<int> ListInteger { get; set; }
 
-        public List<string>? ListString { get; set; }
+        public List<string> ListString { get; set; }
 
-        public List<DataModel>? ListRecusrive { get; set; }
+        public List<DataModel> ListRecusrive { get; set; }
 
-        public DataModel? OneToOne { get; set; }
+        public DataModel OneToOne { get; set; }
     }
 }
