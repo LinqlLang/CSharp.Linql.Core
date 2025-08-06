@@ -33,6 +33,11 @@ namespace Linql.Core
             }
             return false;
         }
+
+        public string GetHashKey(Type PropType)
+        {
+            return $"{this.PropertyName}:{PropType.Name}";
+        }
     }
 
 
@@ -70,9 +75,10 @@ namespace Linql.Core
                 }
 
                 bool propsMatch = true;
+                int index = 0;
                 foreach(LinqlAnonymousProperty prop in this.Properties)
                 {
-                    propsMatch = casted.Properties.Any(s => s.Equals(prop));
+                    propsMatch = casted.Properties[0].Equals(prop);
 
                     if(!propsMatch)
                     {
@@ -84,6 +90,13 @@ namespace Linql.Core
                     && base.Equals(obj);
             }
             return false;
+        }
+
+        public string GetHashKey(IEnumerable<Type> PropTypes)
+        {
+            var zip = this.Properties.Zip(PropTypes, (left, right) => new { LinqlProp = left, PropType = right });
+            IEnumerable<string> hashKeys = zip.Select(r => r.LinqlProp.GetHashKey(r.PropType));
+            return String.Join(";", hashKeys);
         }
 
     }
