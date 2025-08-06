@@ -69,8 +69,16 @@ namespace Linql.Core
                     return false;
                 }
 
-                var zippedProps = this.Properties.Zip(casted.Properties, (left, right) => new { Left = left, Right = right });
-                bool propsMatch = zippedProps.All(r => r.Left.Equals(r.Right));
+                bool propsMatch = true;
+                foreach(LinqlAnonymousProperty prop in this.Properties)
+                {
+                    propsMatch = casted.Properties.Any(s => s.Equals(prop));
+
+                    if(!propsMatch)
+                    {
+                        break;
+                    }
+                }
                 return
                     propsMatch
                     && base.Equals(obj);
