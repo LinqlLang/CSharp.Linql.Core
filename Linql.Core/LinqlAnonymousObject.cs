@@ -21,6 +21,18 @@ namespace Linql.Core
         {
             return $"LinqlAnonymousProperty {this.PropertyName}";
         }
+
+        public override bool Equals(object obj)
+        {
+            if (obj is LinqlAnonymousProperty casted)
+            {
+                return
+                    this.PropertyName.Equals(casted.PropertyName)
+                    && this.Value.Equals(casted.Value)
+                    && base.Equals(obj);
+            }
+            return false;
+        }
     }
 
 
@@ -46,6 +58,24 @@ namespace Linql.Core
             }
             LinqlAnonymousProperty prop = new LinqlAnonymousProperty(PropertyName, Value);
             this.Properties.Add(prop);
+        }
+
+        public override bool Equals(object obj)
+        {
+            if (obj is LinqlAnonymousObject casted)
+            {
+                if(casted.Properties?.Count() != this.Properties?.Count())
+                {
+                    return false;
+                }
+
+                var zippedProps = this.Properties.Zip(casted.Properties, (left, right) => new { Left = left, Right = right });
+                bool propsMatch = zippedProps.All(r => r.Left.Equals(r.Right));
+                return
+                    propsMatch
+                    && base.Equals(obj);
+            }
+            return false;
         }
 
     }
