@@ -72,7 +72,15 @@ namespace Linql.Core
         {
             if (Type.IsGenericType && Type.IsEnumerable())
             {
-                return Type.GetGenericArguments().First();
+                if (Type.GetGenericTypeDefinition() == typeof(IGrouping<,>))
+                {
+                   return Type.GetGenericArguments().LastOrDefault();
+
+                }
+                else
+                {
+                    return Type.GetGenericArguments().First();
+                }                
             }
             else
             {
