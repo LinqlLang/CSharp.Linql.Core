@@ -8,7 +8,7 @@ namespace Linql.Core
     /// <summary>
     /// A LinqlSearch is the container for LinqlExpressions.  It defines the top-most entrypoint of the query.  
     /// </summary>
-    public class LinqlSearch
+    public class LinqlSearch: LinqlExpression
     {
         /// <summary>
         /// The type of search.  This is the entry point of the query.
