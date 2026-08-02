@@ -20,6 +20,7 @@ namespace Linql.Core
     [JsonDerivedType(typeof(LinqlAnonymousObject), typeDiscriminator: nameof(LinqlAnonymousObject))]
     [JsonDerivedType(typeof(LinqlAnonymousProperty), typeDiscriminator: nameof(LinqlAnonymousProperty))]
     [JsonDerivedType(typeof(LinqlSearch), typeDiscriminator: nameof(LinqlSearch))]
+    [JsonDerivedType(typeof(LinqlCondition), typeDiscriminator: nameof(LinqlCondition))]
     public abstract class LinqlExpression
     {
         /// <summary>
